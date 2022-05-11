@@ -1,11 +1,14 @@
 version: 2.1
 jobs:
-  build:
+  build-android:
     docker:
-      - image: cimg/node:17.2.0 # ジョブのコマンドが実行されるプライマリ コンテナ
+      - image: cimg/android:2021.10.2
         auth:
           username: mydockerhub-user
-          password: $DOCKERHUB_PASSWORD  # コンテキスト/プロジェクト UI 環境変数を参照します
+          password: $DOCKERHUB_PASSWORD  # context / project UI env-var reference
     steps:
+      - add_ssh_keys:
+          fingerprints:
+          - "70:b2:f1:e3:19:00:d0:48:5d:d2:da:e1:68:5d:a4:3e"
       - checkout # プロジェクト ディレクトリ内のコードをチェックアウトします
       - run: echo "hello world" # `echo` コマンドを実行します
