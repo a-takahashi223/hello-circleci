@@ -26,7 +26,7 @@ jobs:
     steps:
       - add_ssh_keys:
           fingerprints:
-          - "78:0d:9f:c8:83:62:7c:c6:4c:9e:34:63:40:96:33:72"
+          - "70:b2:f1:e3:19:00:d0:48:5d:d2:da:e1:68:5d:a4:3e"
       - checkout
       - run: echo "A more familiar hi"
       - attach_workspace:
