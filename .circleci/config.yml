@@ -9,6 +9,6 @@ jobs:
     steps:
       - add_ssh_keys:
           fingerprints:
-          - "70:b2:f1:e3:19:00:d0:48:5d:d2:da:e1:68:5d:a4:3e"
+            - "70:b2:f1:e3:19:00:d0:48:5d:d2:da:e1:68:5d:a4:3e"
       - checkout # プロジェクト ディレクトリ内のコードをチェックアウトします
       - run: echo "hello world" # `echo` コマンドを実行します
