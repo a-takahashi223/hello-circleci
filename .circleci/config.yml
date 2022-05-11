@@ -1,6 +1,6 @@
 version: 2.1
 jobs:
-  build-android:
+  build:
     docker:
       - image: cimg/android:2021.10.2
         auth:
